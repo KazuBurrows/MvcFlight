@@ -1,0 +1,112 @@
+@* @model IEnumerable<MvcFlight.Models.Flight> *@
+@model MvcFlight.Models.FlightAirlineViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<form asp-controller="Flights" asp-action="Index" method="get">
+    <p>
+        @* <select asp-for="FlightAirline" asp-items="Model.Airlines">
+            <option value="">All</option>
+        </select> *@
+
+        <select asp-for="IsItDeparture">
+            <option value=true>Departures</option>
+            <option value=false>Arrivals</option>
+        </select>
+        <input type="submit" value="Filter" />
+
+        <br>
+
+        FlightNo: <input type="text" asp-for="SearchString" placeholder="Flight#, Airline or Location"/>
+        <input type="submit" value="Search" />
+    </p>
+</form>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Flights![0].FlightNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Flights![0].Airline)
+            </th>
+            @* <th>
+                @Html.DisplayNameFor(model => model.Flights![0].DepartTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Flights![0].ArriveTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Flights![0].DepartLocation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Flights![0].ArriveLocation)
+            </th> *@
+            <th>
+                @Html.DisplayNameFor(model => model.Flights![0].Gate)
+            </th>
+            @* <th>
+                @Html.DisplayNameFor(model => model.Flights![0].IsDeparture)
+            </th> *@
+            <th>
+                @Html.DisplayNameFor(model => model.Flights![0].Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Flights![0].Status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Flights!) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FlightNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Airline)
+            </td>
+            @* <td>
+                @Html.DisplayFor(modelItem => item.DepartTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArriveTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartLocation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArriveLocation)
+            </td> *@
+            <td>
+                @Html.DisplayFor(modelItem => item.Gate)
+            </td>
+            @* <td>
+                @Html.DisplayFor(modelItem => item.IsDeparture)
+            </td> *@
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
