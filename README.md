@@ -16,4 +16,4 @@ dotnet watch or ctr + f5
 Navigate to localhost:{port}/Flights
 
 
-[![Watch the video]](https://raw.githubusercontent.com/KazuBurrows/MvcFlight/master/New%20Recording%20-%2028_08_2023%2C%209.58.12%20pm.mp4?token=GHSAT0AAAAAACFP5Y2YY75BEAWM7APPLKNMZHMOKOA)
+[!(https://raw.githubusercontent.com/KazuBurrows/MvcFlight/master/New%20Recording%20-%2028_08_2023%2C%209.58.12%20pm.mp4?token=GHSAT0AAAAAACFP5Y2YY75BEAWM7APPLKNMZHMOKOA)]
