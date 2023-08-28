@@ -16,4 +16,4 @@ dotnet watch or ctr + f5
 Navigate to localhost:{port}/Flights
 
 
-![](https://github.com/KazuBurrows/MvcFlight/blob/master/New%20Recording%20-%2028_08_2023%2C%209.58.12%20pm.mp4)
+![](https://github.com/KazuBurrows/MvcFlight/blob/master/New%20Recording%20-%2028_08_2023%2C%209.58.12%20pm.gif)
