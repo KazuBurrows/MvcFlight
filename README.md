@@ -1,5 +1,5 @@
 # MvcFlight
-
+Copies the basic search/ filter functionality from the christchruch airport website.
 
 To run app in VScode
 dotnet build
